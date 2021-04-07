@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4a412a "
+    tools:context=".GetStartedActivity">
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="380dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="180dp"
+        android:onClick="notButton"
+        android:text="But I'm not going to!"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+<!--button will increment a count-->
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="I want to smoke..."
+        android:textColor="#6b8e23 "
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="380dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="100dp"
+        android:text="Give in to temptation"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+<!--button will ask the user to confirm they want to smoke or suggest an alternative action.  after that, the user can insist on smoking (is there a need to count that?)-->
+</androidx.constraintlayout.widget.ConstraintLayout>
