@@ -19,7 +19,7 @@
     <item
         android:id="@+id/inspo"
         android:icon="@mipmap/inspo_foreground"
-        android:onClick="inspoToast"
+        android:onClick="inspoAlert"
         android:title="inspo"
         app:showAsAction="always" />
 

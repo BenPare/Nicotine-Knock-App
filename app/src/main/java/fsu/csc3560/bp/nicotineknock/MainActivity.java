@@ -96,14 +96,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void inspoToast(MenuItem item) {
+    public void inspoAlert(MenuItem item) {
 
         FragmentManager inspoFrag;
         inspoFrag = getSupportFragmentManager();
         FragmentTransaction ft = inspoFrag.beginTransaction();
         ft.commit();
-        inspirationalQuote notSoToast = new inspirationalQuote();
-        notSoToast.show(inspoFrag, "Inspirational Quote Dialog Fragment");
+        inspirationalQuote quoteAlert = new inspirationalQuote();
+        quoteAlert.show(inspoFrag, "Inspirational Quote Dialog Fragment");
 
     }
 }
