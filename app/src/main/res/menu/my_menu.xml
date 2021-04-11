@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/settings"
+        android:onClick="optionsButton"
+        android:title="Settings" />
+
+    <item
+        android:id="@+id/quit"
+        android:title="Sign out" />
+
+    <item
+        android:id="@+id/about"
+        android:onClick="websiteButton"
+        android:title="Learn more" />
+
+</menu>
