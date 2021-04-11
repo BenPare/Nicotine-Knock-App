@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Nicotine Knock</string>
+
+    <!--changing the number of elements in this array requires interaction with the static integers in
+    inspirationalQuotes.java-->
+
+    <string-array
+        name="inspirational_quotes">
+        <item>“It does not matter how slowly you go so long as you do not stop.”_Confucius</item>
+        <item>“You are greater than your addiction.”_Nasia Davos</item>
+        <item>“I’ve failed over and over and over again in my life and that is why I succeed.”_Michael Jordan</item>
+        <item>“Quitting smoking is rather a marathon than a sprint. It is not a one-time attempt, but a longer effort.”_Aristotle</item>
+        <item>“Thousands of people stop smoking a day – by dying from it. I simply wish you won’t be one of them.”_Anonymous</item>
+        <item>“Smoking is suicide by installments.”_H.M. Forester</item>
+        <item>“Your craving is temporary, but the damage to your lungs is permanent.”_Anonymous</item>
+        <item>“Work like there is someone working twenty four hours a day to take it away from you.”_Mark Cuban</item>
+        <item>“Invest in your dreams. Grind now. Shine later.”_Unknown</item>
+        <item>“If you hear a voice within you say ‘you cannot paint,’ then by all means paint and that voice will be silenced.”_Vincent Van Gogh</item>
+    </string-array>
 </resources>

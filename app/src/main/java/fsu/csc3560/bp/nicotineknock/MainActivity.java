@@ -6,6 +6,7 @@ import androidx.core.app.ShareCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -97,7 +98,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void inspoToast(MenuItem item) {
 
-        Toast.makeText(MainActivity.this, "Random inspirational quote here", Toast.LENGTH_LONG).show();
+        FragmentManager inspoFrag;
+        inspoFrag = getSupportFragmentManager();
+        FragmentTransaction ft = inspoFrag.beginTransaction();
+        ft.commit();
+        inspirationalQuote notSoToast = new inspirationalQuote();
+        notSoToast.show(inspoFrag, "Inspirational Quote Dialog Fragment");
 
     }
 }
