@@ -2,6 +2,7 @@ package fsu.csc3560.bp.nicotineknock;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ShareCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -75,6 +76,17 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void shareIntent(MenuItem item) {
+        String txt = "it has been X days since my last cigarette!";
+        String mimeType = "text/plain";
+        ShareCompat.IntentBuilder
+                .from(this)
+                .setType(mimeType)
+                .setChooserTitle("use a different app")
+                .setText(txt)
+                .startChooser();
     }
 
 }
