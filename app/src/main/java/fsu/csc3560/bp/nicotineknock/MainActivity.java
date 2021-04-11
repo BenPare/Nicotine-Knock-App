@@ -89,4 +89,15 @@ public class MainActivity extends AppCompatActivity {
                 .startChooser();
     }
 
+    public void updateToast(MenuItem item) {
+
+        Toast.makeText(MainActivity.this, "It has been X days since your last cigarette!", Toast.LENGTH_LONG).show();
+
+    }
+
+    public void inspoToast(MenuItem item) {
+
+        Toast.makeText(MainActivity.this, "Random inspirational quote here", Toast.LENGTH_LONG).show();
+
+    }
 }
