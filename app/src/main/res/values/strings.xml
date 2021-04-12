@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">Nicotine Knock</string>
 
-    <!--these quotes should be about addiction or overcoming obstacles changing the number of elements in this array
-    requires interaction with the static integers in inspirationalQuotes.java-->
+    <!--these quotes should be about addiction or overcoming obstacles-->
 
     <string-array
         name="inspirational_quotes">

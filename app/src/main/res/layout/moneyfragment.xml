@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4a412a"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/moneytext"
+        android:layout_width="298dp"
+        android:layout_height="88dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="248dp"
+        android:text="Money saved based on the average cost of any box of cigarettes"
+        android:textColor="#6b8e23"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="298dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="76dp"
+        android:text="Money saved based on custom specified brand of cigarette"
+        android:textColor="#6b8e23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moneytext" />
+
+    <!--multiplies the count by the cost per cigarette which is obtained from which brand the user picks in options-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,48 +7,52 @@
     android:background="#4a412a "
     tools:context=".AnalyticsActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="Number of days since last cigarette: X"
-        android:textAlignment="center"
-        android:textColor="#6b8e23"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
     <!--displays the number of full days since the user last interacted with the button indicating they smoked a cigarette-->
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="Number of cigarettes not smoked: x"
-        android:textAlignment="center"
-        android:textColor="#6b8e23"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
     <!--displays the count that gets incremented when the user decides not to smoke-->
 
-    <TextView
-        android:id="@+id/textView5"
+
+    <FrameLayout
+        android:id="@+id/fragment_placeholder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#4a412a"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></FrameLayout>
+
+    <Button
+        android:id="@+id/moneyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="Money saved on cigarettes not smoked: x (money) y (currency)"
-        android:textAlignment="center"
-        android:textColor="#6b8e23"
-        android:textSize="30sp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="296dp"
+        android:backgroundTint="#6b8e23"
+        android:text="Money"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/numberButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:backgroundTint="#6b8e23"
+        android:text="Numbers"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-    <!--multiplies the count by the cost per cigarette which is obtained from which brand the user picks in options-->
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/timeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="22dp"
+        android:backgroundTint="#6b8e23"
+        android:text="Time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

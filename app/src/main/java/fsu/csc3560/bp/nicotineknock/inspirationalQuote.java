@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.DialogFragment;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class inspirationalQuote extends DialogFragment {
@@ -18,26 +19,26 @@ public class inspirationalQuote extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
         String[] inspoQuotes = getResources().getStringArray(R.array.inspirational_quotes);
-        String[] arrQuotes = new String[9]; //create two arrays each the size of the number of quotes -1
-        String[] arrNames = new String[9];
-        for (int i = 0; i < 9; i++) { //iterate for the number of inspirational quotes -1
+        ArrayList<String> arrQuotes = new ArrayList<String>();
+        ArrayList<String> arrNames = new ArrayList<String>();
+        for (int i = 0; i < arrQuotes.size() - 1; i++) {
             //split the string, the names are on the end after an underscore
             String[] parts = inspoQuotes[i].split("_");
             String quote = parts[0]; // quote
             String name = parts[1]; // quoted by
 
-            arrQuotes[i] = quote;
-            arrNames[i] = name;
+            arrQuotes.add(quote);
+            arrNames.add(name);
         }
 
         Random rand = new Random();
-        int upperbound = 10; //upperbound takes the number of inspirational quotes
+        int upperbound = arrQuotes.size(); //upperbound takes the number of inspirational quotes
         int here = rand.nextInt(upperbound);
 
         // Use the Builder class for convenient dialog construction
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle(arrNames[here])
-                .setMessage(arrQuotes[here])
+        builder.setTitle(arrNames.get(here))
+                .setMessage(arrQuotes.get(here))
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // User affirms the dialog
