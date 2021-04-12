@@ -19,26 +19,26 @@ public class inspirationalQuote extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
         String[] inspoQuotes = getResources().getStringArray(R.array.inspirational_quotes);
-        ArrayList<String> arrQuotes = new ArrayList<String>();
-        ArrayList<String> arrNames = new ArrayList<String>();
-        for (int i = 0; i < arrQuotes.size() - 1; i++) {
+        String[] arrQuotes = new String[inspoQuotes.length];
+        String[] arrNames = new String[inspoQuotes.length];
+        for (int i = 0; i < inspoQuotes.length - 1; i++) {
             //split the string, the names are on the end after an underscore
             String[] parts = inspoQuotes[i].split("_");
             String quote = parts[0]; // quote
             String name = parts[1]; // quoted by
 
-            arrQuotes.add(quote);
-            arrNames.add(name);
+            arrQuotes[i] = quote;
+            arrNames[i] = name;
         }
 
         Random rand = new Random();
-        int upperbound = arrQuotes.size(); //upperbound takes the number of inspirational quotes
+        int upperbound = inspoQuotes.length - 1; //upperbound takes the number of inspirational quotes
         int here = rand.nextInt(upperbound);
 
         // Use the Builder class for convenient dialog construction
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle(arrNames.get(here))
-                .setMessage(arrQuotes.get(here))
+        builder.setTitle(arrNames[here])
+                .setMessage(arrQuotes[here])
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // User affirms the dialog
