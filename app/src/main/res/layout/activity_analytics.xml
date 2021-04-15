@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4a412a "
     tools:context=".AnalyticsActivity">
 
     <!--displays the number of full days since the user last interacted with the button indicating they smoked a cigarette-->
@@ -16,7 +15,6 @@
         android:id="@+id/fragment_placeholder"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#4a412a"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,33 +22,35 @@
 
     <Button
         android:id="@+id/moneyButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="296dp"
-        android:backgroundTint="#6b8e23"
+        android:layout_width="110dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#FFA500"
         android:text="Money"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/numberButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:backgroundTint="#6b8e23"
-        android:text="Numbers"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/numberButton"
+        android:layout_width="110dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#FFA500"
+        android:text="Numbers"
+        app:layout_constraintEnd_toStartOf="@+id/timeButton"
+        app:layout_constraintStart_toEndOf="@+id/moneyButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/timeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="22dp"
-        android:backgroundTint="#6b8e23"
+        android:layout_width="110dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#FFA500"
         android:text="Time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

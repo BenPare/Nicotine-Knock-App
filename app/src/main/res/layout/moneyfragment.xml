@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4a412a"
+    android:backgroundTint="#FFA500"
     android:orientation="vertical">
 
     <TextView
@@ -13,8 +13,9 @@
         android:layout_height="88dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="248dp"
-        android:text="Money saved based on the average cost of any box of cigarettes"
-        android:textColor="#6b8e23"
+        android:text="Money saved based on the average cost of any box of cigarettes:"
+        android:textColor="#A27557"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -25,8 +26,9 @@
         android:layout_width="298dp"
         android:layout_height="88dp"
         android:layout_marginTop="76dp"
-        android:text="Money saved based on custom specified brand of cigarette"
-        android:textColor="#6b8e23"
+        android:text="Money saved based on custom specified brand of cigarette:"
+        android:textColor="#A27557"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moneytext" />
