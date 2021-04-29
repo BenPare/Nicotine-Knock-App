@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Nicotine Knock</string>
+    <string name="cost_hint">Enter Cost Per Pack</string>
+    <string name="saved_pack_cost">Saved cost per pack</string>
+    <string name="settings_file">settings.txt</string>
 
     <!--these quotes should be about addiction or overcoming obstacles-->
 

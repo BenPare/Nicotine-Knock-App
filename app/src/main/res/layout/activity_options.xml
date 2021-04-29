@@ -9,30 +9,30 @@
     <!--sets the brand of cigarette, used to find the price of an individual cigarette to calculate money saved-->
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="290dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="110dp"
-        android:backgroundTint="#A27557"
-        android:text="Set Brand"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/button5"
         android:layout_width="290dp"
         android:layout_height="65dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="471dp"
         android:backgroundTint="#A27557"
-        android:text="Set Currency"
+        android:onClick="setCostButton"
+        android:text="Set Cost"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How much does a pack of your cigarettes cost?"
+        android:textAlignment="center"
+        android:textColor="#A27557"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <!--sets currency, might be too advanced for the assignment since brand prices are hardcoded.
     Maybe replace these with the option of specifying the price of the brand and nothing more-->
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,14 +6,9 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.fragment.app.DialogFragment;
-
-import java.util.ArrayList;
 import java.util.Random;
 
 public class inspirationalQuote extends DialogFragment {
-
-    //this class makes use of static integers.  If you add to the array that holds inspirational strings then
-    //you have to change the static integers that interact with the inspirational quotes array of strings.
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -21,7 +16,7 @@ public class inspirationalQuote extends DialogFragment {
         String[] inspoQuotes = getResources().getStringArray(R.array.inspirational_quotes);
         String[] arrQuotes = new String[inspoQuotes.length];
         String[] arrNames = new String[inspoQuotes.length];
-        for (int i = 0; i < inspoQuotes.length - 1; i++) {
+        for (int i = 0; i < inspoQuotes.length; i++) {
             //split the string, the names are on the end after an underscore
             String[] parts = inspoQuotes[i].split("_");
             String quote = parts[0]; // quote
@@ -32,7 +27,7 @@ public class inspirationalQuote extends DialogFragment {
         }
 
         Random rand = new Random();
-        int upperbound = inspoQuotes.length - 1; //upperbound takes the number of inspirational quotes
+        int upperbound = inspoQuotes.length; //upperbound takes the number of inspirational quotes
         int here = rand.nextInt(upperbound);
 
         // Use the Builder class for convenient dialog construction
