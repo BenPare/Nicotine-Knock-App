@@ -8,13 +8,18 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import java.math.BigDecimal;
+import java.math.MathContext;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -80,7 +85,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void shareIntent(MenuItem item) {
-        String txt = "it has been X days since my last cigarette!";
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+
+        int defCount = 0;
+        String defValue = "6.65";
+        String price = sharedPref.getString(getString(R.string.saved_pack_cost), defValue);
+        int noCount = sharedPref.getInt(getString(R.string.negative_count), defCount);
+        //I'm sure this math can be optimized somehow
+        double one = Double.parseDouble(price)/20;
+        double saved = one*noCount;
+        BigDecimal bd = new BigDecimal(saved);
+        bd = bd.round(new MathContext(3));
+        double rounded = bd.doubleValue();
+
+        String txt = "I have saved " + rounded + " by not smoking cigarettes and it has been X days since my last cigarette!";
         String mimeType = "text/plain";
         ShareCompat.IntentBuilder
                 .from(this)

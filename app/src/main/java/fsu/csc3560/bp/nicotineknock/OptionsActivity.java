@@ -8,8 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 
-public class OptionsActivity extends AppCompatActivity
-        implements setCostBox.NoticeDialogListener{
+public class OptionsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +23,6 @@ public class OptionsActivity extends AppCompatActivity
         ft.commit();
         setCostBox newBox = new setCostBox();
         newBox.show(costFrag, "Inspirational Quote Dialog Fragment");
-    }
-
-    @Override
-    public void onDialogPositiveClick(DialogFragment dialog) {
-
     }
 
 }

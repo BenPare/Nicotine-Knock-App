@@ -19,25 +19,6 @@ import java.io.InputStream;
 
 public class setCostBox extends DialogFragment {
 
-    public interface NoticeDialogListener {
-        public void onDialogPositiveClick(DialogFragment dialog);
-    }
-
-    NoticeDialogListener listener;
-
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        // Verify that the host activity implements the callback interface
-        try {
-            // Instantiate the NoticeDialogListener so we can send events to the host
-            listener = (NoticeDialogListener) context;
-        } catch (ClassCastException e) {
-            // The activity doesn't implement the interface, throw exception
-            throw new ClassCastException("must implement NoticeDialogListener");
-        }
-    }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -49,12 +30,12 @@ public class setCostBox extends DialogFragment {
         .setPositiveButton("Set Price", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
-                listener.onDialogPositiveClick(setCostBox.this);
-
                 String newString = etName.getText().toString();
+                newString = new StringBuffer(newString.trim()).insert(newString.length()-2, ".").toString();
+
                 SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
                 SharedPreferences.Editor editor = sharedPref.edit();
-                editor.putInt(getString(R.string.saved_pack_cost), Integer.parseInt(newString));
+                editor.putString(getString(R.string.saved_pack_cost), newString);
                 editor.apply();
             }
         })

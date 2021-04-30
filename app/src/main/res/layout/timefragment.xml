@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/numbertext"
+        android:id="@+id/noCountText"
         android:layout_width="298dp"
         android:layout_height="88dp"
         android:layout_gravity="center_horizontal"

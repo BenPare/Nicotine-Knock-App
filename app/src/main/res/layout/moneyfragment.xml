@@ -8,30 +8,31 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/moneytext"
-        android:layout_width="298dp"
-        android:layout_height="88dp"
+        android:id="@+id/defaultMoneyText"
+        android:layout_width="334dp"
+        android:layout_height="177dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="248dp"
         android:text="Money saved based on the average cost of any box of cigarettes:"
         android:textColor="#A27557"
-        android:textSize="18sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customMoneyText" />
 
     <TextView
         android:id="@+id/customMoneyText"
-        android:layout_width="298dp"
-        android:layout_height="88dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="312dp"
+        android:layout_height="147dp"
         android:text="Money saved based on custom specified brand of cigarette:"
         android:textColor="#A27557"
-        android:textSize="18sp"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/moneytext" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!--multiplies the count by the cost per cigarette which is obtained from which brand the user picks in options-->
 

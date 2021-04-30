@@ -7,17 +7,31 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/numbertext"
+        android:id="@+id/noCountText"
         android:layout_width="298dp"
         android:layout_height="88dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="248dp"
         android:text="Number of cigarettes not smoked:"
+        android:textAlignment="center"
         android:textColor="#A27557"
-        android:textSize="18sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your most common reason for smoking is:"
+        android:textAlignment="center"
+        android:textColor="#A27557"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noCountText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
