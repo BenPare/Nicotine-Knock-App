@@ -46,6 +46,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/costButton" />
+
+    <TextView
+        android:id="@+id/textViewCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Cost: "
+        android:textAlignment="center"
+        android:textColor="#A27557"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/setCurrencyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/costButton" />
+
+    <TextView
+        android:id="@+id/textViewCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Currency Currency: "
+        android:textAlignment="center"
+        android:textColor="#A27557"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setCurrencyButton" />
     <!--sets currency, might be too advanced for the assignment since brand prices are hardcoded.
     Maybe replace these with the option of specifying the price of the brand and nothing more-->
 </androidx.constraintlayout.widget.ConstraintLayout>

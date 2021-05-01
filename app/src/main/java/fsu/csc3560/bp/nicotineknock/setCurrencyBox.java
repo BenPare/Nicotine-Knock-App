@@ -9,6 +9,7 @@ import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.fragment.app.DialogFragment;
 
@@ -30,6 +31,10 @@ public class setCurrencyBox extends DialogFragment {
                         SharedPreferences.Editor editor = sharedPref.edit();
                         editor.putString(getString(R.string.saved_currency), newString);
                         editor.apply();
+
+                        String currency = sharedPref.getString(getString(R.string.saved_currency), "Dollars");
+                        TextView currencyView = (TextView) getActivity().findViewById(R.id.textViewCurrency);
+                        currencyView.setText(getString(R.string.current_currency) + currency);
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

@@ -10,6 +10,7 @@ import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.fragment.app.DialogFragment;
 
@@ -36,6 +37,10 @@ public class setCostBox extends DialogFragment {
                 SharedPreferences.Editor editor = sharedPref.edit();
                 editor.putString(getString(R.string.saved_pack_cost), newString);
                 editor.apply();
+
+                String price = sharedPref.getString(getString(R.string.saved_pack_cost), "6.65");
+                TextView costView = (TextView) getActivity().findViewById(R.id.textViewCost);
+                costView.setText(getString(R.string.current_cost) + price);
             }
         })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
