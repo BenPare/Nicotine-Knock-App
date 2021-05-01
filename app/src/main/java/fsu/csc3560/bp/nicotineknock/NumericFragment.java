@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import java.math.BigDecimal;
-import java.math.MathContext;
-
 public class NumericFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle
@@ -25,7 +22,7 @@ public class NumericFragment extends Fragment {
         int noCount = sharedPref.getInt(getString(R.string.negative_count), defCount);
         //I'm sure this math can be optimized somehow
 
-        TextView custom = (TextView) returnView.findViewById(R.id.noCountText);
+        TextView custom = (TextView) returnView.findViewById(R.id.smokeTimeText);
         custom.setText("Number of cigarettes not smoked: " + noCount);
 
         return returnView;

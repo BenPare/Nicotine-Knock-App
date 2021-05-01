@@ -31,4 +31,13 @@ public class GetStartedActivity extends AppCompatActivity {
         editor.putInt(getString(R.string.negative_count), noCount);
         editor.apply();
     }
+
+    public void didButton(View view) {
+        //smoke button
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        long smokeTime = System.currentTimeMillis();
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putLong(getString(R.string.smoke_time), smokeTime);
+        editor.apply();
+    }
 }

@@ -7,17 +7,17 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/noCountText"
-        android:layout_width="298dp"
-        android:layout_height="88dp"
+        android:id="@+id/smokeTimeText"
+        android:layout_width="305dp"
+        android:layout_height="179dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="248dp"
-        android:text="Number of days since last cigarette:"
+        android:text="Date of last cigarette:"
         android:textColor="#A27557"
-        android:textSize="18sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

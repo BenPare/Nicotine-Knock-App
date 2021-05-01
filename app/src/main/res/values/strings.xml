@@ -5,6 +5,7 @@
     <string name="settings_file">settings.txt</string>
     <string name="decimal_title">Ignore Decimal</string>
     <string name="negative_count">This is the count for cigarettes not smoked</string>
+    <string name="smoke_time">This is the count for the last time the user smoked</string>
 
     <!--these quotes should be about addiction or overcoming obstacles-->
 

@@ -31,7 +31,7 @@
         android:onClick="notButton"
         android:text="But I'm not going to!"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintBottom_toTopOf="@+id/smokeButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,12 +51,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/smokeButton"
         android:layout_width="320dp"
         android:layout_height="96dp"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="54dp"
         android:backgroundTint="#A27557"
+        android:onClick="didButton"
         android:text="Give in to temptation"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"

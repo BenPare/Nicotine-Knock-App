@@ -16,10 +16,13 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -98,7 +101,13 @@ public class MainActivity extends AppCompatActivity {
         bd = bd.round(new MathContext(3));
         double rounded = bd.doubleValue();
 
-        String txt = "I have saved " + rounded + " by not smoking cigarettes and it has been X days since my last cigarette!";
+        long timeZero = 0;
+        long lastTime = sharedPref.getLong(getString(R.string.smoke_time), timeZero);
+
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date(lastTime);
+
+        String txt = "I have saved " + rounded + " by not smoking cigarettes and I have not had a cigarette since " + formatter.format(date) + "!";
         String mimeType = "text/plain";
         ShareCompat.IntentBuilder
                 .from(this)

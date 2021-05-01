@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/noCountText"
+        android:id="@+id/smokeTimeText"
         android:layout_width="298dp"
         android:layout_height="88dp"
         android:layout_gravity="center_horizontal"
@@ -32,6 +32,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/noCountText" />
+        app:layout_constraintTop_toBottomOf="@+id/smokeTimeText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
