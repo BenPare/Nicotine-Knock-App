@@ -38,8 +38,10 @@ public class MoneyFragment extends Fragment {
         bd = bd.round(new MathContext(3));
         double rounded = bd.doubleValue();
 
+        String currency = sharedPref.getString(getString(R.string.saved_currency), "Dollars");
+
         TextView custom = (TextView) returnView.findViewById(R.id.customMoneyText);
-        custom.setText("Money saved based on your brand cost (" + price + ") of cigarettes: " + rounded);
+        custom.setText("Money saved based on your brand cost (" + price + ") of cigarettes: " + rounded + " " + currency);
 
         double defSaved = (defDouble/20)*noCount;
         BigDecimal bDef = new BigDecimal(defSaved);
@@ -47,7 +49,7 @@ public class MoneyFragment extends Fragment {
         double roundDef = bDef.doubleValue();
 
         TextView defaultText = (TextView) returnView.findViewById(R.id.defaultMoneyText);
-        defaultText.setText("Money saved based on the average cost (" + defDouble +  ") of any box of cigarettes: " + roundDef);
+        defaultText.setText("Money saved based on the average cost (" + defDouble +  ") of any box of cigarettes: " + roundDef + " " + currency);
 
         return returnView;
     }}

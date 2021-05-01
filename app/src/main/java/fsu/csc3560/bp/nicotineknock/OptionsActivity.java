@@ -22,7 +22,15 @@ public class OptionsActivity extends AppCompatActivity {
         FragmentTransaction ft = costFrag.beginTransaction();
         ft.commit();
         setCostBox newBox = new setCostBox();
-        newBox.show(costFrag, "Inspirational Quote Dialog Fragment");
+        newBox.show(costFrag, "Cost dialog fragment");
     }
 
+    public void setCurrencyButton(View view) {
+        FragmentManager currencyFrag;
+        currencyFrag = getSupportFragmentManager();
+        FragmentTransaction ft = currencyFrag.beginTransaction();
+        ft.commit();
+        setCurrencyBox newBox = new setCurrencyBox();
+        newBox.show(currencyFrag, "Currency dialog fragment");
+    }
 }

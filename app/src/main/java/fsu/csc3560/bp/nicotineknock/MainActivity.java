@@ -107,7 +107,10 @@ public class MainActivity extends AppCompatActivity {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date(lastTime);
 
-        String txt = "I have saved " + rounded + " by not smoking cigarettes and I have not had a cigarette since " + formatter.format(date) + "!";
+        String currency = sharedPref.getString(getString(R.string.saved_currency), "Dollars");
+
+        String txt = "I have saved " + rounded + " " + currency + " by not smoking cigarettes! \n" +
+                "I have not had a cigarette since " + formatter.format(date) + "!";
         String mimeType = "text/plain";
         ShareCompat.IntentBuilder
                 .from(this)

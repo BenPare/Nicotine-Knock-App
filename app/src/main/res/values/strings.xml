@@ -6,6 +6,9 @@
     <string name="decimal_title">Ignore Decimal</string>
     <string name="negative_count">This is the count for cigarettes not smoked</string>
     <string name="smoke_time">This is the count for the last time the user smoked</string>
+    <string name="currency_hint">Enter the name of your currency</string>
+    <string name="currency_title">CURRENCY</string>
+    <string name="saved_currency">Key for currency</string>
 
     <!--these quotes should be about addiction or overcoming obstacles-->
 
