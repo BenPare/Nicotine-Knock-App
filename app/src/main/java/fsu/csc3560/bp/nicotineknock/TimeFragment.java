@@ -24,9 +24,13 @@ public class TimeFragment extends Fragment {
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date(lastTime);
+        Date now = new Date(System.currentTimeMillis());
 
         TextView stText = (TextView) returnView.findViewById(R.id.smokeTimeText);
         stText.setText("The day you had your last cigarette: " + formatter.format(date));
+
+        TextView dnText = (TextView) returnView.findViewById(R.id.textDayNumber);
+        dnText.setText("Number of days since last cigarette: " + MainActivity.getDayCount(formatter.format(date), formatter.format(now)));
 
         return returnView;
     }}

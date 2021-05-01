@@ -22,6 +22,7 @@ import android.widget.Toast;
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.text.SimpleDateFormat;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
@@ -106,10 +107,12 @@ public class MainActivity extends AppCompatActivity {
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date(lastTime);
+        Date now = new Date(System.currentTimeMillis());
 
         String currency = sharedPref.getString(getString(R.string.saved_currency), "Dollars");
 
         String txt = "I have saved " + rounded + " " + currency + " by not smoking cigarettes! \n" +
+                "It has been " + MainActivity.getDayCount(formatter.format(date), formatter.format(now)) + " day(s) since my last cigarette! \n" +
                 "I have not had a cigarette since " + formatter.format(date) + "!";
         String mimeType = "text/plain";
         ShareCompat.IntentBuilder
@@ -135,5 +138,21 @@ public class MainActivity extends AppCompatActivity {
         inspirationalQuote quoteAlert = new inspirationalQuote();
         quoteAlert.show(inspoFrag, "Inspirational Quote Dialog Fragment");
 
+    }
+
+    private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+    public static long getDayCount(String start, String end) {
+        long diff = -1;
+        try {
+            Date dateStart = simpleDateFormat.parse(start);
+            Date dateEnd = simpleDateFormat.parse(end);
+
+            //time is always 00:00:00, so rounding should help to ignore the missing hour when going from winter to summer time, as well as the extra hour in the other direction
+            diff = Math.round((dateEnd.getTime() - dateStart.getTime()) / (double) 86400000);
+        } catch (Exception e) {
+            //handle the exception according to your own situation
+        }
+        return diff;
     }
 }
