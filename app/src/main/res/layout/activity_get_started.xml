@@ -97,7 +97,7 @@
             android:id="@+id/radioButton4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Need pleasure" />
+            android:text="For pleasure" />
     </RadioGroup>
 
     <!--button will ask the user to confirm they want to smoke or suggest an alternative action.  after that, the user can insist on smoking (is there a need to count that?)-->

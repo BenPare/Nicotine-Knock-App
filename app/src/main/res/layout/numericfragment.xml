@@ -17,8 +17,20 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textReason"
+        android:layout_width="334dp"
+        android:layout_height="177dp"
+        android:text="Your most common reason for smoking is: "
+        android:textAlignment="center"
+        android:textColor="#A27557"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/smokeTimeText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

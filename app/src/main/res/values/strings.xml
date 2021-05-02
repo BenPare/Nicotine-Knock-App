@@ -11,6 +11,15 @@
     <string name="saved_currency">Key for currency</string>
     <string name="current_cost">\Current Cost (default is $6.65): $\</string>
     <string name="current_currency">\Current Currency (default is dollars): \</string>
+    <string name="stress_count">Key for stress count</string>
+    <string name="social_factors_count">Key for social factors count</string>
+    <string name="boredom_count">Bey for boredom count</string>
+    <string name="pleasure_count">Key for pleasure count</string>
+    <string name="stress_reason">Your most common reason for smoking is stress</string>
+    <string name="social_factors_reason">Your most common reasons for smoking are social factors</string>
+    <string name="boredom_reason">Your most common reason for smoking is boredom</string>
+    <string name="pleasure_reason">Your most common reason for smoking is for pleasure</string>
+    <string name="text_not_smoked">\Number of cigarettes not smoked: \</string>
 
     <!--these quotes should be about addiction or overcoming obstacles-->
 
