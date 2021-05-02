@@ -125,7 +125,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void updateToast(MenuItem item) {
 
-        Toast.makeText(MainActivity.this, "It has been X days since your last cigarette!", Toast.LENGTH_LONG).show();
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+
+        long timeZero = 0;
+        long lastTime = sharedPref.getLong(getString(R.string.smoke_time), timeZero);
+
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date(lastTime);
+        Date now = new Date(System.currentTimeMillis());
+
+        Toast.makeText(MainActivity.this, MainActivity.getDayCount(formatter.format(date), formatter.format(now)) + " day(s) since your last cigarette!", Toast.LENGTH_LONG).show();
 
     }
 
