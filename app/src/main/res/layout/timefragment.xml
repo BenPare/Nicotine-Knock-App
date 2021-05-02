@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/smokeTimeText"
-        android:layout_width="319dp"
-        android:layout_height="112dp"
+        android:layout_width="334dp"
+        android:layout_height="177dp"
         android:layout_gravity="center_horizontal"
         android:text="Date of last cigarette:"
         android:textColor="#A27557"
@@ -22,8 +22,8 @@
 
     <TextView
         android:id="@+id/textDayNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="334dp"
+        android:layout_height="177dp"
         android:text="Number of days since last cigarette: "
         android:textAlignment="center"
         android:textColor="#A27557"

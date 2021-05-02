@@ -23,8 +23,8 @@
 
     <TextView
         android:id="@+id/customMoneyText"
-        android:layout_width="312dp"
-        android:layout_height="147dp"
+        android:layout_width="334dp"
+        android:layout_height="177dp"
         android:text="Money saved based on custom specified brand of cigarette:"
         android:textColor="#A27557"
         android:textSize="30sp"
