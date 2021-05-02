@@ -30,6 +30,10 @@ public class GetStartedActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt(getString(R.string.negative_count), noCount);
         editor.apply();
+
+        //send the user back to the main activity after they make their choice
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     public void didButton(View view) {
@@ -39,5 +43,9 @@ public class GetStartedActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putLong(getString(R.string.smoke_time), smokeTime);
         editor.apply();
+
+        //send the user back to the main activity after they make their choice
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
