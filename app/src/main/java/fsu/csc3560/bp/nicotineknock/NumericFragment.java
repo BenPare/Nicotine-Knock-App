@@ -1,5 +1,6 @@
 package fsu.csc3560.bp.nicotineknock;
 
+
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -9,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+
+import java.util.Random;
 
 public class NumericFragment extends Fragment {
     @Override
@@ -26,4 +29,6 @@ public class NumericFragment extends Fragment {
         custom.setText("Number of cigarettes not smoked: " + noCount);
 
         return returnView;
-    }}
+    }
+
+}

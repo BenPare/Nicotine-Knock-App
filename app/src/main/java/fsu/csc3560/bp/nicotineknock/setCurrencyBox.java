@@ -32,7 +32,7 @@ public class setCurrencyBox extends DialogFragment {
                         editor.putString(getString(R.string.saved_currency), newString);
                         editor.apply();
 
-                        String currency = sharedPref.getString(getString(R.string.saved_currency), "Dollars");
+                        String currency = sharedPref.getString(getString(R.string.saved_currency), "dollars");
                         TextView currencyView = (TextView) getActivity().findViewById(R.id.textViewCurrency);
                         currencyView.setText(getString(R.string.current_currency) + currency);
                     }

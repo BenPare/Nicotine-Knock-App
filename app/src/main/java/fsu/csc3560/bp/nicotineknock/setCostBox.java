@@ -38,7 +38,7 @@ public class setCostBox extends DialogFragment {
                 editor.putString(getString(R.string.saved_pack_cost), newString);
                 editor.apply();
 
-                String price = sharedPref.getString(getString(R.string.saved_pack_cost), "6.65");
+                String price = sharedPref.getString(getString(R.string.saved_pack_cost), "$6.65");
                 TextView costView = (TextView) getActivity().findViewById(R.id.textViewCost);
                 costView.setText(getString(R.string.current_cost) + price);
             }

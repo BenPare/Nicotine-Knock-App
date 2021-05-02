@@ -9,8 +9,8 @@
     <string name="currency_hint">Enter the name of your currency</string>
     <string name="currency_title">CURRENCY</string>
     <string name="saved_currency">Key for currency</string>
-    <string name="current_cost">\Current Cost (default is 6.65): \</string>
-    <string name="current_currency">\Current Currency (default is Dollars): \</string>
+    <string name="current_cost">\Current Cost (default is $6.65): $\</string>
+    <string name="current_currency">\Current Currency (default is dollars): \</string>
 
     <!--these quotes should be about addiction or overcoming obstacles-->
 

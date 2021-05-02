@@ -9,30 +9,60 @@
 
     <TextView
         android:id="@+id/defaultMoneyText"
-        android:layout_width="334dp"
-        android:layout_height="177dp"
+        android:layout_width="335dp"
+        android:layout_height="115dp"
         android:layout_gravity="center_horizontal"
-        android:text="Money saved based on the average cost of any box of cigarettes:"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="7dp"
+        android:text=" "
         android:textColor="#A27557"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/savedDefault"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/savedMoney" />
+
+    <TextView
+        android:id="@+id/customMoneyText"
+        android:layout_width="335dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="164dp"
+        android:text=" "
+        android:textColor="#A27557"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/savedMoney"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="20dp"
+        android:text=" "
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/defaultMoneyText"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/customMoneyText" />
 
     <TextView
-        android:id="@+id/customMoneyText"
-        android:layout_width="334dp"
-        android:layout_height="177dp"
-        android:text="Money saved based on custom specified brand of cigarette:"
-        android:textColor="#A27557"
+        android:id="@+id/savedDefault"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="35dp"
+        android:text=" "
+        android:textAlignment="center"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/defaultMoneyText" />
 
     <!--multiplies the count by the cost per cigarette which is obtained from which brand the user picks in options-->
 

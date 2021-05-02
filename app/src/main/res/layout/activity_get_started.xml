@@ -8,40 +8,26 @@
 
     <!--button will increment a count-->
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="138dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="142dp"
-        android:text="For pleasure"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
-
     <Button
         android:id="@+id/noButton"
         android:layout_width="320dp"
         android:layout_height="96dp"
-        android:layout_marginTop="59dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="10dp"
         android:backgroundTint="#A27557"
         android:onClick="notButton"
         android:text="But I'm not going to!"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/smokeButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="57dp"
+        android:layout_marginTop="64dp"
         android:text="I want to smoke..."
         android:textColor="#FFA500"
         android:textSize="30sp"
@@ -54,8 +40,8 @@
         android:id="@+id/smokeButton"
         android:layout_width="320dp"
         android:layout_height="96dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="54dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="64dp"
         android:backgroundTint="#A27557"
         android:onClick="didButton"
         android:text="Give in to temptation"
@@ -67,56 +53,52 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="197dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="110dp"
+        android:layout_width="156dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="21dp"
         android:text="What caused this?"
         android:textColor="@color/black"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="105dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="175dp"
-        android:text="Boredom"
-        android:textSize="16sp"
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="138dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="21dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="105dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="175dp"
-        android:text="Stress"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stress" />
 
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="157dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="123dp"
-        android:text="Social Smoking"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Social Factors" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Boredom" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Need pleasure" />
+    </RadioGroup>
+
     <!--button will ask the user to confirm they want to smoke or suggest an alternative action.  after that, the user can insist on smoking (is there a need to count that?)-->
 </androidx.constraintlayout.widget.ConstraintLayout>
