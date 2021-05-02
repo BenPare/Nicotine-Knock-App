@@ -26,7 +26,9 @@ public class NumericFragment extends Fragment {
         //I'm sure this math can be optimized somehow
 
         TextView custom = (TextView) returnView.findViewById(R.id.smokeTimeText);
-        custom.setText(getString(R.string.text_not_smoked) + noCount);
+        custom.setText(getString(R.string.text_not_smoked));
+        TextView customNot = (TextView) returnView.findViewById(R.id.notSmoked);
+        customNot.setText(""+ noCount);
 
         int countStress = sharedPref.getInt(getString(R.string.stress_count), defCount);
         int countSocial = sharedPref.getInt(getString(R.string.social_factors_count), defCount);

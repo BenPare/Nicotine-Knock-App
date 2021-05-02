@@ -8,14 +8,14 @@
 
     <TextView
         android:id="@+id/smokeTimeText"
-        android:layout_width="334dp"
-        android:layout_height="177dp"
+        android:layout_width="330dp"
+        android:layout_height="93dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="200dp"
         android:text="Number of cigarettes not smoked:"
         android:textAlignment="center"
         android:textColor="#A27557"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,11 +24,24 @@
         android:id="@+id/textReason"
         android:layout_width="334dp"
         android:layout_height="177dp"
+        android:layout_marginTop="43dp"
         android:text="Your most common reason for smoking is: "
         android:textAlignment="center"
         android:textColor="#A27557"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notSmoked" />
+
+    <TextView
+        android:id="@+id/notSmoked"
+        android:layout_width="105dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="19dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/smokeTimeText" />

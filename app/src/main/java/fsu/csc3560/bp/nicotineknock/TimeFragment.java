@@ -27,10 +27,15 @@ public class TimeFragment extends Fragment {
         Date now = new Date(System.currentTimeMillis());
 
         TextView stText = (TextView) returnView.findViewById(R.id.smokeTimeText);
-        stText.setText("The day you had your last cigarette: " + formatter.format(date));
+        stText.setText("The day you had your last cigarette: ");
+
+        TextView dateText = (TextView) returnView.findViewById(R.id.lastDate);
+        dateText.setText(formatter.format(date));
 
         TextView dnText = (TextView) returnView.findViewById(R.id.textDayNumber);
-        dnText.setText("Number of days since last cigarette: " + MainActivity.getDayCount(formatter.format(date), formatter.format(now)));
+        dnText.setText("Number of days since last cigarette: ");
 
+        TextView daysText = (TextView) returnView.findViewById(R.id.numDays);
+        daysText.setText(""+ MainActivity.getDayCount(formatter.format(date), formatter.format(now)));
         return returnView;
     }}

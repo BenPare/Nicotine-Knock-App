@@ -8,30 +8,55 @@
 
     <TextView
         android:id="@+id/smokeTimeText"
-        android:layout_width="334dp"
-        android:layout_height="177dp"
+        android:layout_width="329dp"
+        android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="200dp"
         android:text="Date of last cigarette:"
         android:textAlignment="center"
         android:textColor="#A27557"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textDayNumber"
-        android:layout_width="334dp"
-        android:layout_height="177dp"
+        android:layout_width="319dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="70dp"
         android:text="Number of days since last cigarette: "
         android:textAlignment="center"
         android:textColor="#A27557"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastDate" />
+
+    <TextView
+        android:id="@+id/lastDate"
+        android:layout_width="238dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/smokeTimeText" />
+
+    <TextView
+        android:id="@+id/numDays"
+        android:layout_width="197dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDayNumber" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

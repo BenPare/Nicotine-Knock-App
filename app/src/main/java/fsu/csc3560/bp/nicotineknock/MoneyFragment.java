@@ -41,9 +41,9 @@ public class MoneyFragment extends Fragment {
         String currency = sharedPref.getString(getString(R.string.saved_currency), "Dollars");
 
         TextView custom = (TextView) returnView.findViewById(R.id.customMoneyText);
-        custom.setText("Money saved based on your brand cost ($" + price + ") of cigarettes:");
+        custom.setText("Money saved based on your brand cost (" + price + " " + currency + ") per pack of cigarettes:");
         TextView custom2 = (TextView) returnView.findViewById(R.id.savedMoney);
-        custom2.setText("$"+ rounded + " (" + currency+ ")");
+        custom2.setText(rounded + " (" + currency+ ")");
 
         double defSaved = (defDouble/20)*noCount;
         BigDecimal bDef = new BigDecimal(defSaved);
@@ -51,8 +51,8 @@ public class MoneyFragment extends Fragment {
         double roundDef = bDef.doubleValue();
 
         TextView defaultText = (TextView) returnView.findViewById(R.id.defaultMoneyText);
-        defaultText.setText("Money saved based on the average cost ($" + defDouble +  ") of any box of cigarettes: ");
+        defaultText.setText("Money saved based on the average brand cost (" + defDouble + " " + currency + ") per pack of cigarettes (USA): ");
         TextView defaultText2 = (TextView) returnView.findViewById(R.id.savedDefault);
-        defaultText2.setText("$" + roundDef + " (" + currency +")");
+        defaultText2.setText(roundDef + " (" + currency +")");
         return returnView;
     }}
