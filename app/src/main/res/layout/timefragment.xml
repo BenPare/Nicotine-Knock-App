@@ -12,6 +12,7 @@
         android:layout_height="177dp"
         android:layout_gravity="center_horizontal"
         android:text="Date of last cigarette:"
+        android:textAlignment="center"
         android:textColor="#A27557"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
