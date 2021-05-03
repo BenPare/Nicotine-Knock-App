@@ -1,0 +1,10 @@
+Karisma Duong
+kduong1@student.fitchburgstate.edu
+
+Ben Pare
+bpare1@student.fitchburgstate.edu
+
+Project Status: Complete
+
+Project Description:
+This app helps users who are looking to quit smoking. Anytime the user has the urge to smoke a cigarette they could log onto the app and register a cigarette. Upon entering the app, the menu bar, app name, app logo, and two buttons are displayed. Each of the buttons open up a new activity. The first being "I want to smoke" which opens up the activity that then asks the user what caused the urge and if they will give into tempation or not. If the user chooses “But I’m not going to” it brings them back to the home page and it is recorded and displayed in "Analytics," which is the second button on the home page. Depending if the user smokes or not, data is recorded or restarted to keep track of the progress. Other functionalites include the items in the menu bar. This contains an intent that allows users to share progress made, a button that displays a toast which tells the user how many days smoke free they went, a button that opens up a dialog box generating random inspirational quotes, and an overflow menu containing buttons that give the users three options. The first option being "Settings" which opens up a new activity that allows the user to set the price of the pack of cigarettes previously used and the currency they wish to use. If the price of the pack of cigarettes change, the user can input the new price in the settings and the money saved will be updated as well. The second option is the "Sign Out" button which opens up a dialog asking if the user wants to sign out or not. Depending on the option chosen, the user will either be redirected back to the home page or have the app closed. If the app is closed, all of the data is still saved for when the user reopens the app. The last option in the overflow menu, "Learn More" includes a link to the CDC website giving tips on how to quit smoking. 
